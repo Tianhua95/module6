@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Styleguide</title>
+
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
+	<link rel="stylesheet" href="css/storetheme.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Halant&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-none">
+	<h1>Styleguide _ Blingbling & Co. Store</h1>
+	</div>
+
+
+</div>
+</header>
+
+
+
+<div class="container" id="tableofcontents">
+		<h1>Table of Contents</h1>
+
+		<div class="card">
+		<nav class="nav">
+			<ul>
+				<li><a href="#typography">Typography</a></li>
+				<li><a href="#headings">Headings</a></li>
+				<li><a href="#paragraphs">Paragraphs</a></li>
+				<li><a href="#cards">Cards</a></li>
+				<li><a href="#colors">Colors</a></li>
+				<li><a href="#button">button</a></li>
+				<li><a href="#checkbox">Check Box</a></li>
+				<li><a href="#formcontrol">Form Control</a></li>
+				<li><a href="#figures">Figures</a></li>
+				<li><a href="#toggle">Toggle</a></li>
+				<li><a href="#view-window">View-Window</a></li>
+				<li><a href="#table">Table</a></li>
+				<li><a href="#hotdog">Hotdog</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+<div class="container" id="typography">
+
+	<h1>Typography</h1>
+
+	<div class="card soft" id="headings">
+		<h3>Headings</h3>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+	</div>
+
+	<h2>Paragraphs</h2>
+	<div class="card soft1" id="paragraphs">
+		
+		<p class="words">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, odit eveniet neque voluptate aperiam natus dolorem saepe itaque iste perferendis nihil, minima. Numquam ullam enim, cupiditate veritatis aperiam quos, eaque.</p>
+		<p class="words">Aliquam fugit quibusdam a soluta, molestias illo tenetur, repellat id error aliquid magni quaerat, molestiae maiores illum dicta voluptatem expedita commodi quidem debitis sequi asperiores provident exercitationem animi adipisci officia.</p>
+		<p class="words">Fugit inventore quia quibusdam expedita nulla assumenda, officiis? Possimus asperiores ex, libero illo, reiciendis tempore, aliquid mollitia expedita sapiente harum error rerum delectus quaerat laudantium praesentium dolorum commodi reprehenderit sed.</p>
+	</div>
+
+	<h1>Colors</h1>
+<div class="card soft" id="colors">
+	<div class="grid gap">
+		<div class="col-xs-12 col-md-12">
+
+			<div class="color1">#e26c4e</div>
+		</div>
+
+		<div class="col-xs-12 col-md-12">
+
+			<div class="color2">#efb374</div>
+		</div>
+
+		<div class="col-xs-12 col-md-12">
+
+			<div class="color3">#eac8ad</div>
+		</div>
+
+		<div class="col-xs-12 col-md-12">
+
+			<div class="color4">#f2e7d5</div>
+		</div>
+			
+			<div class="col-xs-12 col-md-12">
+
+			<div class="color5">#ddded6</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container" id="navigations">
+	<h1>Navigations</h1>
+
+	<script>
+		const makeNav = (classes='') =>{
+			const links=['home','store','about'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+              <div>
+              <nav class="${classes}">
+
+              <ul>
+              ${links.reduce((r,o,i)=>{
+              	return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+              },'')}
+			      
+			</ul>
+		</nav>
+     </div>
+	`);
+		}
+
+	</script>
+
+	<div class="card soft">
+		<h3>Flex Nav</h3>
+
+		<script>makeNav('nav nav-flex')</script>
+	</div>
+
+
+	<div class="card soft">
+		<h3>Basic Nav</h3>
+
+		<script>makeNav('nav')</script>
+	</div>
+
+	<div class="card soft">
+		<h3>Stretch Nav</h3>
+		<script>makeNav('nav nav-stretch')</script>
+	</div>
+
+	<div class="card soft">
+		<h3>Pills Nav</h3>
+		<script>makeNav('nav nav-pills')</script>
+
+	</div>
+
+	<div class="card soft">
+		<h3>Crumbs Nav</h3>
+		<script>makeNav('nav nav-crumbs')</script>
+	
+	</div>
+
+	<div class="card soft">
+		<h3>Material Nav</h3>
+		<script>makeNav('nav nav-material')</script>
+	</div>
+
+	<script>
+		$("#navigations a").on("click",function(e){
+			e.preventDefault();
+			$(this).closest("li").addClass("active")
+			.siblings().removeClass("active")
+		})
+	</script>
+</div>
+
+<h1 id="figures">Figures</h1>
+<div class="card">
+
+	<h3>product grid</h3>
+
+	<div class="grid gap">
+	<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+	        
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+         
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<figure class="figure product-overlay">
+		<img src="img/56.jpg" alt="">
+		<figcaption>
+			
+			<div class="text">Hairband  $3.99</div>
+			
+		</figcaption>
+	</figure>
+		</div>
+	</div>
+</div>
+
+	<h1>Button</h1>
+<div class="card soft" id="button" >
+	<h3>Buttons</h3>
+
+	<div class="form-control display-flex flex-align-center">
+		<button type="button"class="form-button">Cancel</button>
+		<input type="button" class="form-button" value="Save">
+		<input type="button" class="form-button" value="Submit">
+		<input type="button" class="form-button" value="Check Out">
+	</div>
+	<!-- <div class="form-control">
+		<a href="#" class="form-button">Anchor</a>
+	</div> -->
+	</div>
+
+<h1>Check Box</h1>
+<div class="card soft" id="checkbox">
+	<h4>check</h4>
+	<div class="check">
+			<label class="check-label">
+			<input type="checkbox" name="check-1" placeholder="text" class="form-input1">Earing
+			<input type="checkbox" name="check-2" placeholder="text" class="form-input1">Bracelet
+		</label>
+		</div>
+
+	<h4>heart checkbox</h4>
+ 	<div class="favorite">
+ 		<input type="checkbox" id="heart-example" class="hidden">
+ 		<label for="heart-example">&hearts;</label>
+
+ 	</div>	
+
+
+
+ 	
+ 		<h4>Select</h4>
+ 			<div class="flex-none">
+ 				<div class="form-select">
+					 	<select>
+					 		<option>1</option>
+					 		<option>2</option>
+					 		<option>3</option>
+					 		<option>4</option>
+					 	</select>
+ 				</div>
+		</div>
+	</div>
+
+		<h1>Forms Control</h1>
+		<div class="card soft" id="formcontrol">
+		<form>
+			<div class="form-control">
+				<label class="form-label">First Name</label>
+				<input type="text" placeholder="first name" class="form-input">
+			</div>
+			<div class="form-control">
+				<label class="form-label">Last Name</label>
+				<input type="text" placeholder="last name" class="form-input">
+			</div>
+			<div class="form-control">
+				<label class="form-label">Email</label>
+				<input type="email" placeholder="email" class="form-input">
+			</div>
+			<div class="form-control">
+				<label class="form-label">Password</label>
+				<input type="password" placeholder="password" class="form-input">
+			</div>
+			<div class="form-control">
+				<label class="form-label">Credit Card Number</label>
+				<input type="bank" placeholder="credit card number" class="form-input">
+			</div>
+			<div class="form-control display-flex flex-align-center">
+				<div class="flex-none">
+					<label class="form-label">Exp. Date</label>
+				</div>
+				<div class="flex-stretch">
+					<input type="date" placeholder="Exp. Date" class="form-input">
+				</div>
+				<div class="flex-none">
+					<label class="form-label">Security Code</label>
+				</div>
+				<div class="flex-stretch">
+					<input type="security code" placeholder="security code" class="form-input">
+				</div>
+			</div>
+			<div class="form-control">
+				<label class="form-label">Address</label>
+				<input type="address" placeholder="address" class="form-input">
+			</div>
+
+			<div class="form-control display-flex flex-align-center">
+		
+				<div class="flex-none">
+					<label class="form-label">Zipcode</label>
+				</div>
+				<div class="flex-stretch">
+					<input type="zipcode" placeholder="zipcode" class="form-input">
+				</div>
+				<div class="flex-none">
+					<label class="form-label">Phone Number</label>
+				</div>
+				<div class="flex-stretch">
+					<input type="phone" placeholder="phone number" class="form-input">
+				</div>
+
+	
+			</div>
+
+				<div class="boxform">
+					<label class="form-lab">Country</label>
+					<div class="form-choice">
+						<select>
+							<option>UK</option>
+							<option>US</option>
+
+						</select>
+					</div>
+				</div>				
+				<div class="boxform1">
+					<label class="form-lab">States</label>
+					<div class="form-choice">
+						<select>
+							<option>Choose</option>
+							<option>California</option>
+
+						</select>
+					</div>
+				</div>
+				
+		
+		</form>
+</div>
+ 
+ <h1>Toggle</h1>
+<div class="card soft" id="toggle">
+	   
+	<div class="display-flex flex-align-center">
+ 		<div class="flex-stretch">
+ 			<label for="toggle-2" class="form-label">Warning</label>
+ 		</div>
+ 		
+ 		<div class="flex-none">
+ 			<div class="toggle">
+ 		<input type="checkbox" id="toggle-2" class="hidden">
+ 		<label for="toggle-2"></label>
+
+
+ 	</div>
+ 		</div>
+ 	</div>
+
+ 	<div class="display-flex flex-align-center">
+ 		<div class="flex-stretch">
+ 			<label for="toggle-3" class="form-label">Alerts</label>
+ 		</div>
+ 		
+ 		<div class="flex-none">
+ 			<div class="toggle">
+ 		<input type="checkbox" id="toggle-3" class="hidden">
+ 		<label for="toggle-3"></label>
+ 		
+
+ 	</div>
+ 		</div>
+ 	</div>
+
+ 	<div class="display-flex flex-align-center">
+ 		<div class="flex-stretch">
+ 			<label for="toggle-1" class="form-label">Notification</label>
+ 		</div>
+ 		
+ 		<div class="flex-none">
+ 			<div class="toggle">
+ 		<input type="checkbox" id="toggle-1" class="hidden">
+ 		<label for="toggle-1"></label>
+ 		
+
+ 	</div>
+ 		</div>
+ 	</div>
+</div>
+
+<h1>Cards</h1>
+<div class="container" id="cards">
+	<h3>Cards basic</h3>
+	<div class="grid gap">
+		<div class="col-xs-12 col-md-4">
+			<div class="card">Card</div>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<div class="card sof">Card Soft</div>
+		</div>
+		
+		<div class="col-xs-12 col-md-4">
+			<div class="card hard">Card Hard</div>
+		</div>
+
+	    <div class="col-xs-12 col-md-4">
+			<div class="card flat">Card Flat</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="card dark">Card Dark</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="card medium">Card Medium</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+<div class="view-window" id="view-window" style="background-image: url('img/34.jpg')"></div>
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+
+
+<script>
+	const makeTable = (classes='') => {
+		const head = ['ID','Office','Name','Email','Phone'];
+		const body = [
+         ['522',"Hamilton Cline",'hcline@acdemyart.edu','555-2424'],
+         ['512',"Fred McHale",'fmchale@acdemyart.edu','555-2424'],
+         ['522',"Michael Catanzaro",'mcatanzaro@acdemyart.edu','555-2424'],
+         ['514',"Andrea Pimentel",'apimentel@acdemyart.edu','555-2424'],
+         ['516',"DC Scarpelli",'dscarpelli@acdemyart.edu','555-2424'],
+		]
+
+		document.write( `
+		<table class="${classes}">
+		    <thead><tr>${head.reduce((r,o)=>r+ `<th>${o}</th>`,'')}</tr></thead>
+		    <tbody>${body.reduce((r,o,i)=>r+
+               `<tr>${
+               	[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+               }</tr>`,'')
+		    }</tbody>
+
+		</table>
+		`);
+		
+	}
+</script>
+
+<h1>Tables</h1>
+
+
+<div class="container" id="table">
+	
+	<div class="card soft">
+		<h3>basic table</h3>
+		<script>makeTable("table")</script>
+	</div>
+
+	<div class="card soft">
+		<h3>striped table</h3>
+
+		<script>makeTable("table striped")</script>
+	</div>
+	
+		<div class="card soft">
+		<h3>striped Lined vertical</h3>
+		
+		<script>makeTable("table lined vertical")</script>
+	</div>
+
+	<div class="card soft">
+		<h3>striped Lined horizontal</h3>
+		
+		<script>makeTable("table lined horizontal")</script>
+	</div>
+
+	<div class="card soft">
+		<h3>striped Lined border</h3>
+		
+		<script>makeTable("table lined border")</script>
+	</div>
+
+
+	<!-- combine togther -->
+
+		<div class="card soft">
+		<h3>combinations</h3>
+		
+		<script>makeTable("table lined vertical border striped")</script>
+	</div>
+
+		<div class="card soft">
+		<h3>striped Lined all</h3>
+		
+		<script>makeTable("table lined all")</script>
+	</div>
+
+	<h1>Hotdog</h1>
+
+<div class="card soft" id="hotdog">
+	<div class="form-control">
+		<form>
+			<input type="search" class="hotdog" placeholder="search">
+		</form>
+	</div>
+
+	<div class="form-control">
+		<form>
+			<input type="search" class="hotdog dark" placeholder="search">
+		</form>
+	</div>
+
+	<div class="form-control">
+		<form class="color dark">
+			<input type="search" class="hotdog light" placeholder="search">
+		</form>
+	</div>
+	<div class="form-control">
+		<form class="hotdog" >
+			<span>&equiv;</span>
+			<input type="search" placeholder="search">
+		</form>
+	</div>
+
+	<div class="form-control">
+		<form class="hotdog" >
+			
+			<input type="search" placeholder="search">
+			<span>&equiv;</span>
+		</form>
+	</div>
+	</div>
+
+</body>
